@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01-hello-react</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="./node_modules/react/umd/react.development.js"></script>
+  <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script>
+    /* 
+    1. 元素名称
+    2. 元素的属性
+    3. 第三个及其以后的参数都是其子节点
+    */
+    const title = React.createElement('h1', null, 'Hello React', React.createElement('span', null, '我是span'))
+
+    /* 
+     1. 第一个参数：创建好的React元素或组件
+     2. 第二个参数,DOM对象，用于指定渲染到页面中的位置。
+    */
+    ReactDOM.render(title, document.getElementById('root'))
+  </script>
+</body>
+
+</html>

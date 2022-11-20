@@ -1,8 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import './index.css'
+
 const name = 'Joke'
-const title = <h1>{name}</h1>
+const title = (
+  <h1 style={{ color: 'skyblue', backgroundColor: 'pink' }} className="title">
+    {name}
+  </h1>
+)
 
 const isLoding = false
 const getContent = () => {
@@ -29,4 +35,4 @@ const list = (
   </ul>
 )
 
-ReactDOM.render(list, document.getElementById('root'))
+ReactDOM.render(title, document.getElementById('root'))
